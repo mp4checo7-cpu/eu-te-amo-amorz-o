@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Ana Júlia ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff4f7;
+      color: #3b2029;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    /* =========================
+       TELA DE ENTRADA
+    ========================= */
+
+    .entrada {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.45), transparent 25%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,.3), transparent 30%),
+        linear-gradient(135deg, #ff5c8a, #ff8fb0);
+    }
+
+    .entrada-bg span {
+      position: absolute;
+      color: rgba(255,255,255,.25);
+      font-size: 80px;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .entrada-bg span:nth-child(1) {
+      left: 8%;
+      top: 15%;
+    }
+
+    .entrada-bg span:nth-child(2) {
+      right: 10%;
+      top: 20%;
+      font-size: 55px;
+      animation-delay: 1s;
+    }
+
+    .entrada-bg span:nth-child(3) {
+      left: 15%;
+      bottom: 15%;
+      font-size: 65px;
+      animation-delay: 2s;
+    }
+
+    .entrada-bg span:nth-child(4) {
+      right: 17%;
+      bottom: 18%;
+      animation-delay: 1.5s;
+    }
+
+    .entrada-bg span:nth-child(5) {
+      left: 50%;
+      top: 8%;
+      font-size: 45px;
+      animation-delay: 2.5s;
+    }
+
+    .entrada-card {
+      position: relative;
+      z-index: 2;
+      width: min(460px, 100%);
+      padding: 50px 35px;
+      text-align: center;
+      background: rgba(255,255,255,.94);
+      border-radius: 30px;
+      box-shadow: 0 25px 70px rgba(100,20,50,.25);
+      animation: appear .8s ease;
+    }
+
+    .entrada-icon {
+      font-size: 70px;
+      margin-bottom: 20px;
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    .mini-label,
+    .label,
+    .pink-label {
+      color: #e94f7c;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .entrada-card h1 {
+      margin: 12px 0;
+      font-size: clamp(34px, 7vw, 52px);
+      color: #3d1724;
+    }
+
+    .entrada-card p {
+      color: #76545e;
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .entrada-card small {
+      display: block;
+      margin-top: 20px;
+      color: #a36a78;
+    }
+
+    /* =========================
+       APP
+    ========================= */
+
+    .app {
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255, 152, 180, .2), transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(255, 92, 138, .15), transparent 30%),
+        #fff7f9;
+    }
+
+    .content-layer {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 6%;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(232, 78, 124, .1);
+    }
+
+    .logo {
+      border: 0;
+      background: transparent;
+      color: #e94f7c;
+      font-size: 18px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .navigation {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .navigation button {
+      border: 0;
+      background: transparent;
+      padding: 10px 14px;
+      border-radius: 12px;
+      color: #74535d;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .navigation button:hover,
+    .navigation button.active {
+      background: #ffe4ec;
+      color: #e94f7c;
+    }
+
+    /* =========================
+       PÁGINAS
+    ========================= */
+
+    .page {
+      width: min(1100px, 90%);
+      min-height: calc(100vh - 85px);
+      margin: auto;
+      padding: 80px 0;
+      animation: pageIn .5s ease;
+    }
+
+    .center-page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    .hero h2 {
+      margin: 15px 0;
+      font-size: clamp(45px, 8vw, 82px);
+      line-height: 1;
+      color: #371822;
+    }
+
+    .hero h2 strong {
+      color: #e94f7c;
+    }
+
+    .hero > p {
+      max-width: 680px;
+      margin: 25px auto;
+      color: #76545e;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-heart {
+      font-size: 85px;
+      margin: 35px 0;
+      animation: pulse 1.8s infinite;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .primary-button,
+    .secondary-button,
+    .outline-button {
+      border-radius: 14px;
+      padding: 14px 22px;
+      font-size: 15px;
+      font-weight: 800;
+      transition: .25s;
+    }
+
+    .primary-button {
+      border: 0;
+      color: white;
+      background: linear-gradient(135deg, #e94f7c, #ff7fa4);
+      box-shadow: 0 10px 25px rgba(233,79,124,.25);
+    }
+
+    .primary-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(233,79,124,.35);
+    }
+
+    .secondary-button {
+      border: 1px solid #f3bfd0;
+      color: #e94f7c;
+      background: white;
+    }
+
+    .secondary-button:hover {
+      background: #fff0f5;
+      transform: translateY(-3px);
+    }
+
+    .outline-button {
+      border: 1px solid #e94f7c;
+      background: white;
+      color: #e94f7c;
+    }
+
+    .outline-button:hover {
+      background: #fff0f5;
+    }
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats {
+      max-width: 750px;
+      margin: 80px auto 35px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      padding: 25px;
+      text-align: center;
+      border: 1px solid #f5d5df;
+      background: rgba(255,255,255,.8);
+      border-radius: 20px;
+    }
+
+    .stat strong {
+      display: block;
+      color: #e94f7c;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: #8a6871;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FRASE
+    ========================= */
+
+    .quote-card {
+      max-width: 750px;
+      margin: auto;
+      padding: 35px;
+      position: relative;
+      text-align: center;
+      border-radius: 25px;
+      background: white;
+      box-shadow: 0 15px 45px rgba(90,30,50,.08);
+    }
+
+    .quote-mark {
+      position: absolute;
+      top: 5px;
+      left: 25px;
+      color: #ffc5d6;
+      font-size: 70px;
+      line-height: 1;
+    }
+
+    .quote-card p {
+      margin: 15px 0 25px;
+      color: #684650;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .quote-card button {
+      border: 0;
+      background: #fff0f5;
+      color: #e94f7c;
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       CARTA
+    ========================= */
+
+    .white-card {
+      width: min(750px, 100%);
+      padding: 55px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 25px 70px rgba(90,30,50,.1);
+      text-align: center;
+    }
+
+    .envelope {
+      width: 150px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      border-radius: 20px;
+      background: #ffe5ed;
+      font-size: 75px;
+      cursor: pointer;
+      transition: .3s;
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    .envelope:hover {
+      transform: scale(1.08) rotate(-2deg);
+    }
+
+    .closed-letter h2,
+    .letter-text h2,
+    .surprise-card h2 {
+      color: #3d1724;
+      font-size: clamp(30px, 5vw, 45px);
+      margin: 15px 0;
+    }
+
+    .closed-letter p,
+    .letter-text p,
+    .surprise-card p {
+      color: #76545e;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .closed-letter .primary-button {
+      margin-top: 20px;
+    }
+
+    .letter-top-emoji {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .letter-text {
+      text-align: left;
+    }
+
+    .letter-text .pink-label {
+      text-align: center;
+    }
+
+    .letter-text h2 {
+      text-align: center;
+    }
+
+    .letter-text p {
+      margin: 20px 0;
+    }
+
+    .final-message {
+      margin: 30px 0;
+      padding: 20px;
+      text-align: center;
+      border-radius: 18px;
+      background: #fff0f5;
+      color: #e94f7c;
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .signature {
+      text-align: right;
+      color: #8d6872;
+      line-height: 1.7;
+      margin: 25px 0;
+    }
+
+    .letter-text .outline-button {
+      display: block;
+      margin: 30px auto 0;
+    }
+
+    /* =========================
+       MOMENTOS
+    ========================= */
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      margin: 15px 0;
+      color: #3d1724;
+      font-size: clamp(35px, 6vw, 55px);
+    }
+
+    .section-title h2 strong {
+      color: #e94f7c;
+    }
+
+    .section-title p {
+      color: #76545e;
+      font-size: 17px;
+    }
+
+    .timeline {
+      width: min(850px, 100%);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .timeline-item {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 60px 1fr 40px;
+      align-items: center;
+      gap: 20px;
+      text-align: left;
+      padding: 22px;
+      border: 1px solid #f1d5df;
+      border-radius: 20px;
+      background: white;
+      transition: .3s;
+    }
+
+    .timeline-item:hover,
+    .timeline-item.selected {
+      transform: translateX(5px);
+      border-color: #f2abc1;
+      box-shadow: 0 12px 35px rgba(90,30,50,.08);
+    }
+
+    .timeline-number {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #ffe5ed;
+      color: #e94f7c;
+      font-weight: 900;
+    }
+
+    .timeline-content span {
+      font-size: 25px;
+    }
+
+    .timeline-content h3 {
+      margin: 5px 0;
+      color: #3d1724;
+      font-size: 20px;
+    }
+
+    .timeline-content p {
+      margin: 8px 0 0;
+      color: #76545e;
+      line-height: 1.6;
+    }
+
+    .timeline-arrow {
+      color: #e94f7c;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       SURPRESA
+    ========================= */
+
+    .surprise-card {
+      overflow: hidden;
+    }
+
+    .surprise-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .surprise-content .pink-label {
+      order: 1;
+    }
+
+    .surprise-content h2 {
+      order: 2;
+    }
+
+    .surprise-content p {
+      order: 3;
+    }
+
+    .surprise-content .gift {
+      order: 4;
+      font-size: 110px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      animation: float 2s infinite;
+    }
+
+    .surprise-content .primary-button {
+      order: 5;
+    }
+
+    .final-surprise {
+      animation: appear .7s ease;
+    }
+
+    .final-surprise h2 {
+      color: #e94f7c;
+    }
+
+    .eu-te-amo {
+      margin: 35px 0;
+      color: #e94f7c;
+      font-size: clamp(40px, 8vw, 75px);
+      font-weight: 900;
+      letter-spacing: 2px;
+      animation: pulse 1.7s infinite;
+    }
+
+    .eu-te-amo span {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    .sparkles {
+      margin: 25px 0 35px;
+      font-size: 25px;
+      letter-spacing: 8px;
+    }
+
+    /* =========================
+       CORAÇÕES
+    ========================= */
+
+    .heart-burst {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      overflow: hidden;
+    }
+
+    .heart-burst span {
+      position: absolute;
+      bottom: -50px;
+      font-size: 28px;
+      animation: heartUp 3.5s ease-out forwards;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 30px 20px 40px;
+      text-align: center;
+      color: #a16f7c;
+      font-size: 14px;
+    }
+
+    /* =========================
+       ANIMAÇÕES
+    ========================= */
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: scale(.95) translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    @keyframes pageIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartUp {
+      0% {
+        opacity: 0;
+        transform: translateY(0) scale(.5) rotate(0);
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-110vh) scale(1.4) rotate(25deg);
+      }
+    }
+
+    /* =========================
+       CELULAR
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .header {
+        padding: 14px 4%;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .navigation {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .navigation button {
+        padding: 8px 9px;
+        font-size: 12px;
+      }
+
+      .page {
+        width: 92%;
+        padding: 55px 0;
+      }
+
+      .hero {
+        padding-top: 20px;
+      }
+
+      .hero h2 {
+        font-size: 48px;
+      }
+
+      .hero > p {
+        font-size: 16px;
+      }
+
+      .hero-heart {
+        font-size: 70px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+        margin-top: 55px;
+      }
+
+      .white-card {
+        padding: 35px 22px;
+      }
+
+      .letter-text {
+        text-align: left;
+      }
+
+      .timeline-item {
+        grid-template-columns: 45px 1fr 25px;
+        gap: 12px;
+        padding: 17px;
+      }
+
+      .timeline-number {
+        width: 40px;
+        height: 40px;
+        font-size: 13px;
+      }
+
+      .timeline-content h3 {
+        font-size: 17px;
+      }
+
+      .timeline-content p {
+        font-size: 14px;
+      }
+
+      .surprise-content .gift {
+        font-size: 85px;
+      }
+
+      .entrada-card {
+        padding: 40px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       TELA DE ENTRADA
+  ========================== -->
+
+  <div id="entrada" class="entrada">
+
+    <div class="entrada-bg">
+      <span>♡</span>
+      <span>♥</span>
+      <span>♡</span>
+      <span>♥</span>
+      <span>♡</span>
+    </div>
+
+    <div class="entrada-card">
+
+      <div class="entrada-icon">💌</div>
+
+      <div class="mini-label">
+        UMA PÁGINA ESPECIAL
+      </div>
+
+      <h1>Para Ana Júlia</h1>
+
+      <p>
+        Existe uma pequena surpresa esperando por você.
+      </p>
+
+      <button class="primary-button" onclick="entrar()">
+        ✨ Entrar
+      </button>
+
+      <small>
+        Feito com carinho ❤️
+      </small>
+
+    </div>
+  </div>
+
+
+  <!-- =========================
+       SITE
+  ========================== -->
+
+  <div id="site" class="app" style="display:none;">
+
+    <div id="heartBurst" class="heart-burst"></div>
+
+    <div class="content-layer">
+
+      <!-- HEADER -->
+
+      <header class="header">
+
+        <button class="logo" onclick="navegar('inicio')">
+          ❤️ Ana Júlia
+        </button>
+
+        <nav class="navigation">
+
+          <button id="nav-inicio" onclick="navegar('inicio')">
+            🏠 Início
+          </button>
+
+          <button id="nav-carta" onclick="navegar('carta')">
+            💌 Carta
+          </button>
+
+          <button id="nav-momentos" onclick="navegar('momentos')">
+            ✨ Momentos
+          </button>
+
+          <button id="nav-surpresa" onclick="navegar('surpresa')">
+            🎁 Surpresa
+          </button>
+
+        </nav>
+
+      </header>
+
+
+      <!-- =========================
+           INÍCIO
+      ========================== -->
+
+      <main id="inicio" class="page">
+
+        <section class="hero">
+
+          <div class="label">
+            UMA PEQUENA DECLARAÇÃO
+          </div>
+
+          <h2>
+            Para <strong>Ana Júlia</strong>
+          </h2>
+
+          <p>
+            Algumas pessoas merecem mais do que uma simples mensagem.
+            Por isso, essa página foi criada especialmente para você.
+          </p>
+
+          <div class="hero-heart">
+            💖
+          </div>
+
+          <div class="hero-buttons">
+
+            <button
+              class="primary-button"
+              onclick="navegar('carta')"
+            >
+              💌 Abrir carta
+            </button>
+
+            <button
+              class="secondary-button"
+              onclick="navegar('momentos')"
+            >
+              ✨ Explorar
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <section class="stats">
+
+          <div class="stat">
+            <strong>∞</strong>
+            <span>Momentos</span>
+          </div>
+
+          <div class="stat">
+            <strong>❤️</strong>
+            <span>Carinho</span>
+          </div>
+
+          <div class="stat">
+            <strong>✨</strong>
+            <span>Sorrisos</span>
+          </div>
+
+        </section>
+
+
+        <section class="quote-card">
+
+          <div class="quote-mark">
+            “
+          </div>
+
+          <p id="frase">
+            Algumas pessoas tornam os dias mais especiais simplesmente por existirem. ❤️
+          </p>
+
+          <button onclick="outraFrase()">
+            ✨ Outra frase
+          </button>
+
+        </section>
+
+      </main>
+
+
+      <!-- =========================
+           CARTA
+      ========================== -->
+
+      <main id="carta" class="page center-page" style="display:none;">
+
+        <section class="white-card">
+
+          <div id="cartaFechada" class="closed-letter">
+
+            <div class="envelope" onclick="abrirCarta()">
+              💌
+            </div>
+
+            <div class="pink-label">
+              UMA CARTA
+            </div>
+
+            <h2>
+              Tem uma mensagem para você
+            </h2>
+
+            <p>
+              Clique no envelope para descobrir.
+            </p>
+
+            <button
+              class="primary-button"
+              onclick="abrirCarta()"
+            >
+              💌 Abrir carta
+            </button>
+
+          </div>
+
+
+          <div id="cartaAberta" class="letter-text" style="display:none;">
+
+            <div class="letter-top-emoji">
+              💖
+            </div>
+
+            <div class="pink-label">
+              PARA ANA JÚLIA
+            </div>
+
+            <h2>
+              Querida Ana Júlia,
+            </h2>
+
+            <p>
+              Talvez eu não consiga colocar em palavras exatamente tudo
+              o que gostaria de dizer, mas queria deixar registrado o quanto
+              você é uma pessoa especial.
+            </p>
+
+            <p>
+              Existem pessoas que chegam de uma forma simples e, aos poucos,
+              acabam tornando momentos comuns muito mais especiais.
+            </p>
+
+            <p>
+              As conversas, as risadas e até os pequenos detalhes podem
+              acabar se transformando em lembranças importantes.
+            </p>
+
+            <p>
+              Então, se algum dia você se perguntar o quanto é especial,
+              espero que lembre desta pequena página.
+            </p>
+
+            <div class="final-message">
+              Você é muito especial. ❤️
+            </div>
+
+            <div class="signature">
+              Com carinho,<br>
+              alguém que preparou tudo isso para você. 💗
+            </div>
+
+            <button
+              class="outline-button"
+              onclick="fecharCarta()"
+            >
+              ↩ Fechar carta
+            </button>
+
+          </div>
+
+        </section>
+
+      </main>
+
+
+      <!-- =========================
+           MOMENTOS
+      ========================== -->
+
+      <main id="momentos" class="page" style="display:none;">
+
+        <section class="section-title">
+
+          <div class="label">
+            PEQUENOS DETALHES
+          </div>
+
+          <h2>
+            Momentos que <strong>importam</strong>
+          </h2>
+
+          <p>
+            Porque às vezes são as pequenas coisas que tornam tudo especial.
+          </p>
+
+        </section>
+
+
+        <section class="timeline">
+
+          <button
+            class="timeline-item selected"
+            onclick="selecionarMomento(0)"
+          >
+
+            <div class="timeline-number">
+              01
+            </div>
+
+            <div class="timeline-content">
+
+              <span>🌷</span>
+
+              <h3>
+                O começo
+              </h3>
+
+              <p id="momento-0">
+                Tudo começa com uma pessoa especial e alguns momentos
+                que ficam guardados.
+              </p>
+
+            </div>
+
+            <div class="timeline-arrow" id="arrow-0">
+              −
+            </div>
+
+          </button>
+
+
+          <button
+            class="timeline-item"
+            onclick="selecionarMomento(1)"
+          >
+
+            <div class="timeline-number">
+              02
+            </div>
+
+            <div class="timeline-content">
+
+              <span>✨</span>
+
+              <h3>
+                Os momentos
+              </h3>
+
+              <p id="momento-1" style="display:none;">
+                São as pequenas coisas, conversas e risadas que acabam
+                se tornando inesquecíveis.
+              </p>
+
+            </div>
+
+            <div class="timeline-arrow" id="arrow-1">
+              +
+            </div>
+
+          </button>
+
+
+          <button
+            class="timeline-item"
+            onclick="selecionarMomento(2)"
+          >
+
+            <div class="timeline-number">
+              03
+            </div>
+
+            <div class="timeline-content">
+
+              <span>💗</span>
+
+              <h3>
+                O carinho
+              </h3>
+
+              <p id="momento-2" style="display:none;">
+                Com o tempo, algumas pessoas acabam conquistando um
+                espaço especial na nossa vida.
+              </p>
+
+            </div>
+
+            <div class="timeline-arrow" id="arrow-2">
+              +
+            </div>
+
+          </button>
+
+
+          <button
+            class="timeline-item"
+            onclick="selecionarMomento(3)"
+          >
+
+            <div class="timeline-number">
+              04
+            </div>
+
+            <div class="timeline-content">
+
+              <span>💌</span>
+
+              <h3>
+                Essa página
+              </h3>
+
+              <p id="momento-3" style="display:none;">
+                E tudo isso aqui foi criado especialmente para
+                Ana Júlia.
+              </p>
+
+            </div>
+
+            <div class="timeline-arrow" id="arrow-3">
+              +
+            </div>
+
+          </button>
+
+        </section>
+
+      </main>
+
+
+      <!-- =========================
+           SURPRESA
+      ========================== -->
+
+      <main id="surpresa" class="page center-page" style="display:none;">
+
+        <section class="white-card surprise-card">
+
+          <div id="surpresaFechada" class="surprise-content">
+
+            <div class="pink-label">
+              ÚLTIMA SURPRESA
+            </div>
+
+            <h2>
+              Tem algo escondido aqui...
+            </h2>
+
+            <p>
+              Você chegou até o final. Agora falta descobrir
+              a última surpresa.
+            </p>
+
+            <div class="gift">
+              🎁
+            </div>
+
+            <button
+              class="primary-button"
+              onclick="abrirSurpresa()"
+            >
+              🎁 Descobrir
+            </button>
+
+          </div>
+
+
+          <div
+            id="surpresaAberta"
+            class="final-surprise"
+            style="display:none;"
+          >
+
+            <div class="pink-label">
+              ANA JÚLIA
+            </div>
+
+            <h2>
+              Você é especial.
+            </h2>
+
+            <p>
+              Essa página pode ter acabado, mas ainda existe
+              uma última mensagem:
+            </p>
+
+            <div class="eu-te-amo">
+              EU TE AMO
+              <span>❤️</span>
+            </div>
+
+            <div class="sparkles">
+              ✨ 💕 ✨ 💕 ✨
+            </div>
+
+            <button
+              class="outline-button"
+              onclick="reiniciarPagina()"
+            >
+              🏠 Voltar ao início
+            </button>
+
+          </div>
+
+        </section>
+
+      </main>
+
+
+      <footer>
+        Feito com ❤️ especialmente para Ana Júlia
+      </footer>
+
+    </div>
+  </div>
+
+
+  <script>
+
+    /* =========================
+       ENTRAR NO SITE
+    ========================== */
+
+    function entrar() {
+
+      document.getElementById("entrada").style.display = "none";
+
+      document.getElementById("site").style.display = "block";
+
+      navegar("inicio");
+    }
+
+
+    /* =========================
+       NAVEGAÇÃO
+    ========================== */
+
+    function navegar(pagina) {
+
+      const paginas = [
+        "inicio",
+        "carta",
+        "momentos",
+        "surpresa"
+      ];
+
+      paginas.forEach(function(item) {
+
+        document.getElementById(item).style.display =
+          item === pagina
+            ? "block"
+            : "none";
+
+      });
+
+      if (pagina === "carta" || pagina === "surpresa") {
+
+        document.getElementById(pagina).style.display = "flex";
+
+      }
+
+      document.querySelectorAll(".navigation button")
+        .forEach(function(botao) {
+
+          botao.classList.remove("active");
+
+        });
+
+      const botaoAtivo =
+        document.getElementById("nav-" + pagina);
+
+      if (botaoAtivo) {
+        botaoAtivo.classList.add("active");
+      }
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+
+    /* =========================
+       FRASES
+    ========================== */
+
+    const frases = [
+
+      "Algumas pessoas tornam os dias mais especiais simplesmente por existirem. ❤️",
+
+      "Seu sorriso tem um jeito especial de deixar tudo mais leve. 💗",
+
+      "Os pequenos momentos podem se transformar nas melhores lembranças. ✨",
+
+      "Você é uma pessoa que merece todo carinho do mundo. 💕",
+
+      "Espero que essa página consiga arrancar um sorriso seu. 💖"
+
+    ];
+
+    let fraseAtual = 0;
+
+
+    function outraFrase() {
+
+      fraseAtual++;
+
+      if (fraseAtual >= frases.length) {
+        fraseAtual = 0;
+      }
+
+      document.getElementById("frase").textContent =
+        frases[fraseAtual];
+
+    }
+
+
+    /* =========================
+       CORAÇÕES
+    ========================== */
+
+    function criarChuvaDeCoracoes() {
+
+      const container =
+        document.getElementById("heartBurst");
+
+      container.innerHTML = "";
+
+      const emojis = [
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "✨"
+      ];
+
+      for (let i = 0; i < 24; i++) {
+
+        const coracao =
+          document.createElement("span");
+
+        coracao.textContent =
+          emojis[i % emojis.length];
+
+        coracao.style.left =
+          (5 + ((i * 17) % 90)) + "%";
+
+        coracao.style.animationDelay =
+          (i * 0.04) + "s";
+
+        container.appendChild(coracao);
+
+      }
+
+      setTimeout(function() {
+        container.innerHTML = "";
+      }, 3500);
+    }
+
+
+    /* =========================
+       CARTA
+    ========================== */
+
+    function abrirCarta() {
+
+      document.getElementById("cartaFechada")
+        .style.display = "none";
+
+      document.getElementById("cartaAberta")
+        .style.display = "block";
+
+      criarChuvaDeCoracoes();
+
+    }
+
+
+    function fecharCarta() {
+
+      document.getElementById("cartaFechada")
+        .style.display = "block";
+
+      document.getElementById("cartaAberta")
+        .style.display = "none";
+
+    }
+
+
+    /* =========================
+       MOMENTOS
+    ========================== */
+
+    function selecionarMomento(numero) {
+
+      for (let i = 0; i < 4; i++) {
+
+        const texto =
+          document.getElementById("momento-" + i);
+
+        const seta =
+          document.getElementById("arrow-" + i);
+
+        const item =
+          document.querySelectorAll(".timeline-item")[i];
+
+        if (i === numero) {
+
+          texto.style.display = "block";
+
+          seta.textContent = "−";
+
+          item.classList.add("selected");
+
+        } else {
+
+          texto.style.display = "none";
+
+          seta.textContent = "+";
+
+          item.classList.remove("selected");
+
+        }
+
+      }
+
+    }
+
+
+    /* =========================
+       SURPRESA
+    ========================== */
+
+    function abrirSurpresa() {
+
+      document.getElementById("surpresaFechada")
+        .style.display = "none";
+
+      document.getElementById("surpresaAberta")
+        .style.display = "block";
+
+      criarChuvaDeCoracoes();
+
+    }
+
+
+    /* =========================
+       REINICIAR
+    ========================== */
+
+    function reiniciarPagina() {
+
+      fecharCarta();
+
+      document.getElementById("surpresaFechada")
+        .style.display = "flex";
+
+      document.getElementById("surpresaAberta")
+        .style.display = "none";
+
+      fraseAtual = 0;
+
+      document.getElementById("frase").textContent =
+        frases[0];
+
+      navegar("inicio");
+
+    }
+
+  </script>
+
+</body>
+</html>
